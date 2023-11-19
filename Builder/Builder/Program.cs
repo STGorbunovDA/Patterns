@@ -45,7 +45,7 @@ class Program
         // выпекаем
         Bread ryeBread = baker.Bake(builder);
         Console.WriteLine(ryeBread.ToString());
-        // оздаем билдер для пшеничного хлеба
+        // cоздаем билдер для пшеничного хлеба
         builder = new WheatBreadBuilder();
         Bread wheatBread = baker.Bake(builder);
         Console.WriteLine(wheatBread.ToString());

@@ -1,0 +1,14 @@
+﻿using Bridge.Classes.Base;
+using Bridge.Interfaces;
+
+namespace Bridge.Classes;
+
+class FreelanceProgrammer : Programmer
+{
+    public FreelanceProgrammer(ILanguage lang) : base(lang) { }
+
+    public override void EarnMoney()
+    {
+        Console.WriteLine("Получаем оплату за выполненный заказ");
+    }
+}

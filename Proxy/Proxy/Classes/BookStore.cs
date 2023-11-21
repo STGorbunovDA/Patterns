@@ -12,7 +12,15 @@ class BookStore : IBook
     }
     public Page GetPage(int number)
     {
-        return db.Pages.FirstOrDefault(p => p.Number == number);
+        try
+        {
+            return db.Pages.FirstOrDefault(p => p.Number == number);
+        }
+        catch (Exception)
+        {
+            return new Page { Id = 1, Number = number, Text = $"мы страницу № {number}" };
+        }
+        
     }
 
     public void Dispose()
